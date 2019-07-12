@@ -9,23 +9,40 @@ class QuestionDetails extends Component {
   constructor(props) {
     super();
     this.state = { text: "", questions: [], comments: [] }; // You can also pass a Quill Delta here
-    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
     const i = 0;
-  }
-
-  handleChange(value) {
-    this.setState({ text: value });
   }
 
   componentDidMount() {
     this.fetch();
   }
 
+  handleSubmit(event) {
+    event.preventDefault();
+    axios
+      .post(
+        `https://project.qstackoverflow.tk/questions/${
+          this.props.match.params.question_id
+        }/comments`,
+        {
+          comment: event.target.comment.value
+        }
+      )
+      .then(res => {
+        if (res.status === 201) {
+          alert("You have successfully registered!");
+          this.props.history.push("/");
+        }
+      });
+  }
+
   async fetch() {
     //console.log(this.props);
     await axios
       .get(
-        `https://project.qstackoverflow.tk/questions/${this.props.match.params.question_id}`
+        `https://project.qstackoverflow.tk/questions/${
+          this.props.match.params.question_id
+        }`
       )
       .then(res => {
         this.state.questions.push(res.data);
@@ -74,7 +91,9 @@ class QuestionDetails extends Component {
                   <p> {item.votes} </p>
                 </div>
                 <form
-                  action={`https://project.qstackoverflow.tk/${item.id}/downvote`}
+                  action={`https://project.qstackoverflow.tk/${
+                    item.id
+                  }/downvote`}
                   method="post"
                 >
                   <button class="arrows">
@@ -105,10 +124,7 @@ class QuestionDetails extends Component {
                     </a>
                   </div>
                   <div class="c12">
-                    <form
-                      action={`https://project.qstackoverflow.tk/questions/${item.id}/comments`}
-                      method="post"
-                    >
+                    <form onSubmit={this.handleSubmit}>
                       <input
                         type="text"
                         class="c13"
@@ -158,7 +174,9 @@ class QuestionDetails extends Component {
               <div class="l">
                 <div class="flex_arr">
                   <form
-                    action={`http://localhost:4000/answer/${data.id}/upvote`}
+                    action={`https://project.qstackoverflow.tk/answer/${
+                      data.id
+                    }/upvote`}
                     method="post"
                   >
                     <button class="arrows1">
@@ -170,7 +188,12 @@ class QuestionDetails extends Component {
                   <div class="arr">
                     <p> {data.votes} </p>
                   </div>
-                  <form action={`/answer/${data.id}/downvote`} method="post">
+                  <form
+                    action={`https://project.qstackoverflow.tk/answer/${
+                      data.id
+                    }/downvote`}
+                    method="post"
+                  >
                     <button class="arrows1">
                       <p>
                         <i class="down arrow1" />

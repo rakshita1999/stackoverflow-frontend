@@ -4,18 +4,27 @@ import "./style3.css";
 class AskQuestion extends Component {
   constructor() {
     super();
-    this.state = { text: "" }; // You can also pass a Quill Delta here
-    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChange(value) {
-    this.setState({ text: value });
+  handleSubmit(event) {
+    event.preventDefault();
+    axios
+      .post(`https://project.qstackoverflow.tk/questions`, {
+        question: event.target.question.value,
+        description: event.target.description.value
+      })
+      .then(res => {
+        if (res.status === 201) {
+          this.props.history.push("/");
+        }
+      });
   }
 
   render() {
     return (
       <div class="ask">
-        <form action="https://project.qstackoverflow.tk/questions" method="post">
+        <form onSubmit={this.handleSubmit}>
           <b> Title</b>
           <br />
           <br />
