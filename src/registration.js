@@ -36,15 +36,30 @@ class RegistrationComponent extends Component {
           <form onSubmit={this.handleSubmit}>
             <div className="form-group">
               <label for="Name">Display Name</label>
-              <input type="name" className="form-control" id="username1" />
+              <input
+                type="name"
+                name="name"
+                className="form-control"
+                id="username1"
+              />
             </div>
             <div className="form-group">
               <label for="Email1">Email</label>
-              <input type="email" className="form-control" id="email1" />
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                id="email1"
+              />
             </div>
             <div className="form-group">
               <label for="Password">Password</label>
-              <input type="password" className="form-control" id="password1" />
+              <input
+                type="password"
+                name="password"
+                className="form-control"
+                id="password1"
+              />
             </div>
             <div className="checkbox">
               <input type="checkbox" id="checkbox1" value="check" />
