@@ -7,7 +7,7 @@ function RegistrationComponent() {
         <br />
         <br />
         <h1>Registration</h1>
-        <form action="/users" method="post">
+        <form action="https://project.qstackoverflow.tk/users" method="post">
           <div className="form-group">
             <label for="Name">Display Name</label>
             <input type="name" className="form-control" id="username1" />

@@ -13,7 +13,7 @@ class body extends Component {
   }
 
   async fetch() {
-    await axios.get("/questions").then(res => {
+    await axios.get("https://project.qstackoverflow.tk/questions").then(res => {
       var i = this.state.questions;
       res.data.map(item => {
         i.push(item);

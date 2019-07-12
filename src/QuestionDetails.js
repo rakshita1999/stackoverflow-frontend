@@ -25,14 +25,14 @@ class QuestionDetails extends Component {
     //console.log(this.props);
     await axios
       .get(
-        `http://localhost:4000/questions/${this.props.match.params.question_id}`
+        `https://project.qstackoverflow.tk/questions/${this.props.match.params.question_id}`
       )
       .then(res => {
         this.state.questions.push(res.data);
         this.setState((this.state.questions = this.state.questions));
         axios
           .get(
-            `http://localhost:4000/questions/${
+            `https://project.qstackoverflow.tk/questions/${
               this.props.match.params.question_id
             }/comments`
           )
@@ -61,7 +61,7 @@ class QuestionDetails extends Component {
             <div class=" c11">
               <div class="col-sm-2 scroll">
                 <form
-                  action={`http://localhost:4000/${item.id}/upvote`}
+                  action={`https://project.qstackoverflow.tk/${item.id}/upvote`}
                   method="post"
                 >
                   <button class="arrows">
@@ -74,7 +74,7 @@ class QuestionDetails extends Component {
                   <p> {item.votes} </p>
                 </div>
                 <form
-                  action={`http://localhost:4000/${item.id}/downvote`}
+                  action={`https://project.qstackoverflow.tk/${item.id}/downvote`}
                   method="post"
                 >
                   <button class="arrows">
@@ -106,7 +106,7 @@ class QuestionDetails extends Component {
                   </div>
                   <div class="c12">
                     <form
-                      action={`/questions/${item.id}/comments`}
+                      action={`https://project.qstackoverflow.tk/questions/${item.id}/comments`}
                       method="post"
                     >
                       <input

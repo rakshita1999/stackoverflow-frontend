@@ -15,7 +15,7 @@ class AskQuestion extends Component {
   render() {
     return (
       <div class="ask">
-        <form action="/questions" method="post">
+        <form action="https://project.qstackoverflow.tk/questions" method="post">
           <b> Title</b>
           <br />
           <br />
