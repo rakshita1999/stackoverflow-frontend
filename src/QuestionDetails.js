@@ -10,6 +10,10 @@ class QuestionDetails extends Component {
     super();
     this.state = { text: "", questions: [], comments: [] }; // You can also pass a Quill Delta here
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.questionUpvote = this.questionUpvote.bind(this);
+    this.questionDownvote = this.questionDownvote.bind(this);
+    this.answerUpvote = this.answerUpvote.bind(this);
+    this.answerDownvote = this.answerDownvote.bind(this);
     const i = 0;
   }
 
@@ -35,6 +39,29 @@ class QuestionDetails extends Component {
       });
   }
 
+  questionUpvote(id, event) {
+    event.preventDefault();
+    axios.post(`https://project.qstackoverflow.tk/${id}/upvote`);
+    this.props.history.push(`/`);
+  }
+
+  questionDownvote(id, event) {
+    event.preventDefault();
+    axios.post(`https://project.qstackoverflow.tk/${id}/downvote`);
+    this.props.history.push(`/`);
+  }
+
+  answerUpvote(id, event) {
+    event.preventDefault();
+    axios.post(`https://project.qstackoverflow.tk/answer/${id}/upvote`);
+    this.props.history.push(`/`);
+  }
+
+  answerDownvote(id, event) {
+    event.preventDefault();
+    axios.post(`https://project.qstackoverflow.tk/answer/${id}/downvote`);
+    this.props.history.push(`/`);
+  }
   async fetch() {
     //console.log(this.props);
     await axios
@@ -76,10 +103,7 @@ class QuestionDetails extends Component {
             </div>
             <div class=" c11">
               <div class="col-sm-2 scroll">
-                <form
-                  action={`https://project.qstackoverflow.tk/${item.id}/upvote`}
-                  method="post"
-                >
+                <form onSubmit={event => this.questionUpvote(item.id, event)}>
                   <button class="arrows">
                     <p>
                       <i class="up arrow" />
@@ -89,12 +113,7 @@ class QuestionDetails extends Component {
                 <div class="arr">
                   <p> {item.votes} </p>
                 </div>
-                <form
-                  action={`https://project.qstackoverflow.tk/${
-                    item.id
-                  }/downvote`}
-                  method="post"
-                >
+                <form onSubmit={event => this.questionDownvote(item.id, event)}>
                   <button class="arrows">
                     <p>
                       <i class="down arrow" />
@@ -172,12 +191,7 @@ class QuestionDetails extends Component {
             {this.state.comments.map(data => (
               <div class="l">
                 <div class="flex_arr">
-                  <form
-                    action={`https://project.qstackoverflow.tk/answer/${
-                      data.id
-                    }/upvote`}
-                    method="post"
-                  >
+                  <form onSubmit={event => this.answerUpvote(data.id, event)}>
                     <button class="arrows1">
                       <p>
                         <i class="up arrow1" />
@@ -187,12 +201,7 @@ class QuestionDetails extends Component {
                   <div class="arr">
                     <p> {data.votes} </p>
                   </div>
-                  <form
-                    action={`https://project.qstackoverflow.tk/answer/${
-                      data.id
-                    }/downvote`}
-                    method="post"
-                  >
+                  <form onSubmit={event => this.answerDownvote(data.id, event)}>
                     <button class="arrows1">
                       <p>
                         <i class="down arrow1" />
