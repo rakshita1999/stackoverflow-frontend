@@ -1,0 +1,26 @@
+#editor{
+    height:10%;
+    
+}
+input[type=text]
+{
+    width:100%;
+}
+.post_question
+{
+    background-color: #2b9cef;
+border-radius: 2px;
+border: 2px solid #2b9cef;
+width:200px;
+color:white;
+padding-top:10px; 
+ padding-bottom:10px; 
+
+}
+.c
+{
+    width: 25px;
+}
+.ask{
+    margin:15px;
+}

@@ -1,0 +1,203 @@
+
+.full_container{
+  margin:15px;
+}.center {
+  display: inline;
+  margin-left: auto;
+  margin-right: auto; 
+  /* width:100%; */
+  max-width: 500px;
+  /* height:auto;  */
+  border-top: 5px solid #FF9633;
+  background-color:#E5E0E4;
+  /* float:left; */
+  position: relative;
+}
+
+.head
+{
+  overflow: hidden;
+  max-width: 100%; 
+}
+  
+nav{
+  float: right;
+}
+  
+.login , .signup
+{
+  display:inline-block;
+  width:100px;
+  height:50px;
+  margin-top: 40px;
+  margin-right:20px;
+  border-radius: 2px;
+  margin-left: 0px;
+}
+
+.signup{
+  background-color: #2b9cef;
+  border:2px solid #2b9cef;
+}
+
+.full_container {
+  display:flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  /* flex-direction: row; */
+}
+
+.container_1 {
+  flex:1;
+  display:flex;
+  flex:left;
+  font-size:15px;
+  padding-right:20px;
+}
+
+.cont1{
+  flex:1;
+}
+
+.cont2{
+  flex:1;
+}
+
+.c12g{
+  flex:1;
+  /* border:1px solid green;
+  margin-right: 50px;
+  margin-left: 30px;
+  padding-left: 10px;
+  padding-top: 5px; */
+}
+
+.green_inside{
+  border:1px solid green;
+  height:30px;
+  width:60px;
+  padding:5px;
+}
+
+.cont2{
+  flex:1;
+}
+
+.container_2 {
+  display:flex;
+  flex:5;
+  flex:left;
+  flex-flow:column wrap;
+  padding-right:20px;
+  margin-top: 9px;  
+}
+
+.container_question{
+  /* flex:5; */
+  font-size:15px;
+  float:left;
+  
+}
+.c22{
+  display:flex;
+}
+.c221{
+  flex-flow: row;
+  display:flex; 
+  justify-content: space-between;
+  margin: 5px;
+  padding:0px 2px;
+  border-radius: 3px;
+}
+
+.c2211{
+  flex:1;
+  border-radius: 2px;
+}
+
+.c2212{
+  flex:1;
+  border-radius: 2px;
+}
+
+.c2213{
+  flex:1;
+  border-radius: 2px;
+}
+
+.c222{
+  display:flex;
+  font-size:15px;
+  float:right;
+}
+
+.c2221{
+  /* margin:3px; */
+  margin-right: 100px;
+  border-radius: 4px;
+  padding: 3px;
+  float:right;
+  
+  /* flex:1; */
+  
+}
+.c2222{
+  margin:3px;
+  border-radius: 4px;
+  
+  /* flex:1; */
+  
+}
+.c2223{
+  margin:3px;
+  border-radius: 4px;
+  
+  /* flex:1; */
+  
+}
+
+.header {
+  height: 110px;
+}
+.login,.signup
+{
+  border:none;
+  
+}
+.signup {
+  color:white;
+}
+
+@media(max-width:600px){ 
+  .full_container { flex-flow:column wrap;}
+ .center{
+   width: 40%;
+   height: auto;
+   display: block;
+   margin: auto;
+ }
+ .login , .signup
+ {
+   margin-top: 5px;
+   width:70px;
+   height:35px;
+   border:none;
+
+ }
+ .c49{
+   width:110px;
+ }
+ .signup{
+   color:white;
+ }
+
+}
+
+@media screen and (min-width: 900px) {
+  .header {
+    height: 200px;
+  }
+  .c49{
+    width:150px;
+  }
+}

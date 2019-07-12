@@ -1,0 +1,36 @@
+.button_1 {
+  background-color: #2b9cef;
+  padding: 14px 10px;
+  border-radius: 2px;
+  border: 2px solid #2b9cef;
+  width: 35vw;
+  color: white;
+  height: "auto";
+  width: 41%;
+}
+a {
+  text-decoration: none;
+  text-align: center;
+  margin: auto;
+}
+.log_in {
+  margin-left: 70px;
+}
+#fp {
+  width: 150px;
+}
+#email,
+#password {
+  height: 3vw;
+  width: 40vw;
+}
+@media (max-width: 600px) {
+  #email,
+  #password {
+    padding: 20px;
+    width: 80%;
+  }
+  .button_1 {
+    width: 80%;
+  }
+}

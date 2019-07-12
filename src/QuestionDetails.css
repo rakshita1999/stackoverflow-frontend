@@ -1,0 +1,300 @@
+.center {
+  /* display: block; */
+  margin-left: auto;
+  margin-right: auto;
+  /* width: 60%;
+  height:60px; */
+  border-top: 5px solid #ff9633;
+}
+.c14 {
+  font-size: 20px;
+  /* width: 100%; */
+}
+.main {
+  width: 60%;
+}
+/* .arrow up {
+  padding-left: px;
+}
+.arrow down{
+  padding-left: 9px;
+} */
+.c3 {
+  /* margin-left: 10px; */
+  flex: 10;
+  display: flex;
+  flex-flow: column;
+  /* margin: 20px; */
+}
+.c4 {
+  flex: 3;
+  margin-left: 10px;
+  font-size: 20px;
+}
+#c5button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: white;
+  margin: 4px;
+  font-size: 20px;
+}
+.c6 {
+  font-size: 20px;
+}
+
+.c7 {
+  /* float:right;   */
+  margin: 7px;
+  /* width: 200px; */
+  flex: 1;
+  /* padding: 0px 10px; */
+  font-size: 20px;
+}
+.cont {
+  font-size: 20px;
+}
+.c12 {
+  display: flex;
+}
+.c13 {
+  flex: 2;
+  display: block;
+  /* margin: 4px; */
+  font-size: 20px;
+  padding: 5px 20px;
+  width: 100%;
+}
+.c8 {
+  float: left;
+  width: 20%;
+  height: 15%;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+  margin: 5px;
+  font-size: 20px;
+}
+.c9 {
+  font-size: 10px;
+}
+.c11 {
+  display: flex;
+  flex-direction: row;
+  height: 300px;
+  /* width:100%; */
+}
+.c15 {
+  display: flex;
+  /* flex:1;  */
+  flex-direction: row wrap;
+}
+
+.button {
+  flex: 1;
+  height: 50px;
+  background-color: #2b9cef;
+  border: 2px solid #2b9cef;
+  margin-top: 23px;
+  width: 100px;
+  color: white;
+
+  border-radius: 4px;
+}
+.c16 {
+  flex: 10;
+}
+
+.arrows {
+  background-color: white;
+  border: none;
+}
+
+.arrower {
+  border: 1px solid black;
+}
+
+.arrow1 {
+  background-color: #dddddd;
+}
+
+.arrows1 {
+  background-color: #dddddd;
+  border: none;
+}
+.dot {
+  height: 7px;
+  width: 7px;
+  background-color: rgb(206, 115, 11);
+  border-radius: 50%;
+  display: inline-block;
+}
+.inner1 {
+  flex: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  border-radius: 4px;
+  margin: 5px;
+}
+.inner2 {
+  flex: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  border-radius: 4px;
+  margin: 5px;
+}
+.inner3 {
+  flex: 1;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 2px;
+  padding-bottom: 3px;
+  border-radius: 4px;
+  margin: 5px;
+}
+i {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 20px;
+}
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+#editor {
+  height: 30%;
+  font-size: 20px;
+}
+.flex_arr {
+  flex: 1;
+  /* display: flex; */
+}
+.flex_ans {
+  flex: 2;
+  /* display: flex; */
+}
+
+.arrow1 {
+  font-size: 1px;
+}
+@media (max-width: 600px) {
+  .c11 {
+    height: auto;
+    /* width: 100%; */
+  }
+  /* .container-fluid */
+  /* {
+    margin-left: 0px;
+    margin-right: 0px;
+  } */
+  /* .center{
+    margin: 50px; */
+}
+.c16 {
+  text-align: left;
+}
+.l {
+  display: flex;
+  margin: 15px;
+  padding: 30px 50px 10px 50px;
+  background-color: #dddddd;
+  border-radius: 5px;
+}
+
+.scroll {
+  flex: 1;
+  position: relative;
+  left: 0px;
+  top: 100px;
+}
+
+.arr {
+  margin-left: 25px;
+}
+
+.main {
+  width: 90%;
+}
+.center {
+  width: 60%;
+  height: 70px;
+}
+h3 {
+  width: 93%;
+}
+/* .buttton
+{
+    visibility: hidden;
+} */
+/* .c17{
+    visibility: hidden;
+} */
+
+.c11 {
+  margin: 25px 50px 75px;
+}
+.main {
+  margin: 25px 50px 75px;
+}
+.cont {
+  margin: 25px 50px 75px;
+}
+
+@media (min-width: 601px) {
+  .buttton {
+    visibility: hidden;
+  }
+  .c17 {
+    visibility: hidden;
+  }
+  .cont {
+    margin: 25px 50px 75px;
+  }
+
+  .scroll {
+    flex: 1;
+    position: relative;
+    left: 100px;
+    top: 50px;
+  }
+
+  .l {
+    margin: 5px 700px 5px 100px;
+    padding: 30px 50px 10px 50px;
+    background-color: #dddddd;
+    border-radius: 5px;
+  }
+  /* .flex_arr{
+  margin-left: 120px; */
+  /* position: relative;
+  left:40px;
+} */
+  .comment_label {
+    margin: auto;
+    font-size: 30px;
+  }
+
+  .comment_data {
+    margin: auto;
+    font-size: 25px;
+  }
+
+  .arr {
+    margin-right: 200px;
+  }
+  .center {
+    width: 30%;
+    height: auto;
+  }
+}
