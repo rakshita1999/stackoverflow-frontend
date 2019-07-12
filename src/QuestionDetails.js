@@ -30,7 +30,6 @@ class QuestionDetails extends Component {
       )
       .then(res => {
         if (res.status === 201) {
-          alert("You have successfully registered!");
           this.props.history.push("/");
         }
       });
